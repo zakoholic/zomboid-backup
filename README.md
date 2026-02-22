@@ -39,12 +39,12 @@ Instructions after _soapbox_
 Follow these instructions
 - Download both scripts and copy them to the root of your backup directory.
 - If all of the above listed prerequisites are true skip this step, otherwise modify the directory paths in both scripts to match yours.
-- Run "backup-current-zomboid-version.ps1" in PowerShell (this _may_ take a **long** time)
+- Run "backup-current-zomboid-version.ps1" in PowerShell (this _may_ take a **long** time):
   - WIN + R, type PowerShell and hit enter
   - type/paste: `cd c:\ZomboidBackup`
   - type/paste: `.\backup-current-zomboid-version.ps1`
     - You'll apparently only get a progress indicator in PowerShell 7. :/
-    - If you get an error that says you're not allowed to run scripts look up "PowerShell Set-ExecutionPolicy".
+    - If you get an error that says you're not allowed to run scripts look up ["PowerShell Set-ExecutionPolicy"](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.5).
 - Navigate to "%userprofile%" in Windows Explorer and rename the directory "Zomboid" to "ZomboidOriginal"
 - Run "start-zomboid-backup.bat"
 
@@ -60,8 +60,9 @@ Go to your backup directory and create a directory called "userprofile". Copy ev
 ### 3. Backup your mods
 Go to `C:\Program Files (x86)\Steam\steamapps\workshop\content\108600`. The directories in here are all mods currently installed via Steam Workshop. You have to open every directory and copy the contents of its "mods" directory to `C:\ZomboidBackup\userprofile\mods\`.
 
-Let's take the "Vanilla Vehicles Animated" mod as an example:
-The Workshop-ID is 3281755175 and inside the "mods" directory you'll see 5 other directories called "VanillaVehiclesAnimated", "VanillaVehiclesAnimated_SVUpatch" etc. These are the directories you need to copy directly into `C:\ZomboidBackup\userprofile\mods\`. If you've done all this then: Congrats, it's time to play the archived copy.
+Let's take the _"Vanilla Vehicles Animated"_ mod as an example:
+
+The Workshop-ID is **3281755175** and inside its "mods" directory you'll see five other directories called "VanillaVehiclesAnimated", "VanillaVehiclesAnimated_SVUpatch" etc. These are the directories you need to copy directly into `C:\ZomboidBackup\userprofile\mods\`. If you've done all this then: Congrats, it's time to play the archived copy.
 
 ### 4. Play the backed-up copy
 Go into your "%userprofile%" directory and rename the "Zomboid" directory to "ZomboidOriginal". Afterwards you'll need to create a directory junction to make the game think `C:\ZomboidBackup\userprofile` is actually `%userprofile%\Zomboid`. To do this open a command prompt (Win + R, type `cmd` and press enter) and type the following:
@@ -77,6 +78,11 @@ Now go to `C:\ZomboidBackup\game` and launch `ProjectZomboid64.bat` to launch th
 
 
 ### 5. Afterthoughts
-Pretty straight forward backup procedure except for the change in directory structure when copying the mods to your local directory. It makes sense, though, after you think about it because workshop items can bundle more than one mod in a single package. The directory junction isn't unusual because most games expect their settings to be in a fixed location, it's just something most players won't think about using a directory junction for it.
+Pretty straight forward except for the change in directory structure when copying the mods to your local directory. It makes sense after you think about it because workshop items can bundle more than one mod in a single package. The directory junction isn't unusual because most games expect their settings/saves to be in a fixed location, it's just something most players won't think about using a directory junction for it.
 
-You can adapt these scripts pretty easily to bundle any version of Project Zomboid you'd like. It also should be easy to run any of the current versions (it's 2026-02 as I'm writing this, jic) side by side with adapted startup scripts for each one. The fact that you won't get mod updates except for the _current_ version running through Steam goes both ways here.
+You can adapt these scripts pretty easily to bundle any version of Project Zomboid you'd like. It also should be easy to run any of the current versions (it's 2026-02 as I'm writing this, jic) side by side with adapted startup scripts for each one. The fact that you won't get mod updates except for the current version running through Steam goes both ways here.
+
+Thank **you** for reading. Thanks **TIS** for making a game me and other players care about as much to even warrant a guide like this.
+Cheers! 💜
+
+\* You know exactly what I mean. 😜
