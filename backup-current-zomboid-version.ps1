@@ -2,8 +2,8 @@
 # Change these two variables to __your__ Steam installation path
 # and the desired backup directory
 # -----------------------------------------------------------------------------
-$steamDir  = "G:\SteamLibrary\steamapps\"
-$backupDir = "E:\ZomboidBackup\"
+$steamDir  = "C:\Program Files (x86)\Steam\steamapps\"
+$backupDir = "C:\ZomboidBackup\"
 
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
