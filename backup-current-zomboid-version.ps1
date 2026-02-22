@@ -9,7 +9,7 @@ $backupDir = "E:\ZomboidBackup\"
 # -----------------------------------------------------------------------------
 $backupUserProfileDir	= $backupDir + "userprofile\"
 $backupGameDir			= $backupDir + "game\"
-$gameDir				= $steamDir + "common\ProjectZomboid"
+$gameDir				= $steamDir + "common\ProjectZomboid\"
 $workshopModsDir		= $steamDir + "workshop\content\108600\"
 $userProfileDir			= [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::UserProfile) + "\Zomboid\*"
 
@@ -18,6 +18,7 @@ Write-Host "backing up game files"
 if (!(Test-Path -Path $backupGameDir)) {
 	[void](New-Item -Path $backupGameDir -ItemType Directory)
 }
+$gameDir += "*"
 Copy-Item -Path $gameDir -Destination $backupGameDir -Recurse -Force
 
 
