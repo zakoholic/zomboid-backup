@@ -47,6 +47,7 @@ Follow these instructions
     - If you get an error that says you're not allowed to run scripts look up ["PowerShell Set-ExecutionPolicy"](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.5).
 - Navigate to "%userprofile%" in Windows Explorer and rename the directory "Zomboid" to "ZomboidOriginal"
 - Run "start-zomboid-backup.bat"
+  - Run "start-zomboid-backup-debug.bat" to run the game in debug mode. 
 
 
 ## The manual process (or the explanation; depending on perspective)
