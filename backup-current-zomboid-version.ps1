@@ -30,10 +30,23 @@ Copy-Item -Path $userProfileDir -Destination $backupUserProfileDir -Recurse -For
 
 
 Write-Host "copying mods to backed-up userprofile directory"
-$workshopMods     = Get-ChildItem $workshopModsDir -Name
+$workshopMods = Get-ChildItem $workshopModsDir
+
 foreach ($modDir in $workshopMods) {
-	$sourcePath = $workshopModsDir + $modDir + "\mods\*"
-	$targetPath = $backupUserProfileDir + "mods\"
+	$subModDirs = Get-ChildItem -Path "$modDir\mods\*" -Name
 	
-	Copy-Item -Path $sourcePath -Destination $targetPath -Recurse -Force
+	foreach ($currSubModDir in $subModDirs) {
+		If (Test-Path -Path $backupModsDir$currSubModDir) {
+			$itr = 0;
+			
+			do {
+				++$itr;
+			} while (Test-Path -Path $backupModsDir$currSubModDir$itr)
+			
+			Copy-Item -Path "$modDir\mods\$currSubModDir" -Destination $backupModsDir$currSubModDir$itr -Recurse
+			
+		} else {
+			Copy-Item -Path "$modDir\mods\$currSubModDir" -Destination $backupModsDir -Recurse
+		}
+	}
 }
