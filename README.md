@@ -73,7 +73,7 @@ Go into your "%userprofile%" directory and rename the "Zomboid" directory to "Zo
 > **Note:**
 > - This will fail if you haven't renamed the original directory.
 > - You should see this after executing the command:
-> - `Junction created for C:\Users\zakoholic\Zomboid <<===>> C:\Users\zakoholic\ZomboidOriginal`
+> - `Junction created for C:\Users\zakoholic\Zomboid <<===>> C:\ZomboidBackup\userprofile`
 
 Now go to `C:\ZomboidBackup\game` and launch `ProjectZomboid64.bat` to launch the game without the need for Steam running in the background.
 
