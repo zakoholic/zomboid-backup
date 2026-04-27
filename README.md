@@ -67,20 +67,11 @@ The Workshop-ID is **3281755175,** and inside its "mods" directory you'll see fi
 ### 4. Play the backed-up copy
 Go into your backup directory and launch `start-zomboid-backup.bat` to play the backed-up copy.
 
-Alternatively, if you don't want to use the provided batch-file. Go into your "%userprofile%" directory and rename the "Zomboid" directory to "ZomboidOriginal". Afterwards you'll need to create a directory junction to make the game think `C:\ZomboidBackup\userprofile` is actually `%userprofile%\Zomboid`. To do this open a command prompt (`Win + R`, type `cmd` and press enter) and type the following:
-
-`mklink /j "%USERPROFILE%\Zomboid" "C:\ZomboidBackup\userprofile"`
-
-> **Note:**
-> - This will fail if you haven't renamed the original directory.
-> - You should see this after executing the command:
-> - `Junction created for C:\Users\zakoholic\Zomboid <<===>> C:\ZomboidBackup\userprofile`
-
-Now go to `C:\ZomboidBackup\game` and launch `ProjectZomboid64.bat` to launch the game without the need for Steam running in the background.
+Alternatively, if you don't want to use the provided batch file. Go to `C:\ZomboidBackup\game` and create a shortcut to `ProjectZomboid64.bat`. Right-click it, choose `Properties` and add `-cachedir="C:\ZomboidBackup\userprofile"` at the end of the target section.
 
 
 ### 5. Afterthoughts
-Pretty straightforward except for the change in directory structure when copying the mods to your local directory. It makes sense after you think about it because workshop items can bundle more than one mod in a single package. The directory junction isn't really needed because the game actually provides a startup-parameter to set the cache directory (see `start-zomboid-backup.bat`, line 9).
+Pretty straightforward except for the change in directory structure when copying the mods to your local directory. It makes sense after you think about it because workshop items can bundle more than one mod in a single package. The directory junction I used in the previous versions of this guide wasn't needed after all because the game actually provides a startup parameter to set the cache directory.
 
 You can adapt these scripts pretty easily to bundle any version of Project Zomboid you'd like. It also should be easy to run any of the current versions (it's 2026-04 as I'm updating this, jic) side by side with adapted startup scripts for each one. The fact that you won't get mod updates except for the current version running through Steam goes both ways here.
 
