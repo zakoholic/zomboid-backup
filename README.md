@@ -71,7 +71,7 @@ Alternatively, if you don't want to use the provided batch file. Go to `C:\Zombo
 
 
 ### 5. Afterthoughts
-Pretty straightforward except for the change in directory structure when copying the mods to your local directory. It makes sense after you think about it because workshop items can bundle more than one mod in a single package. The directory junction I used in the previous versions of this guide wasn't needed after all because the game actually provides a startup parameter to set the cache directory.
+Pretty straightforward except for the change in directory structure when copying the mods to your local directory. It makes sense after you think about it because workshop items can bundle more than one mod in a single package. The directory junction I used in the previous versions of this guide wasn't needed after all because the game actually provides a startup parameter to set the cache directory. Thanks to reddit user [Brenni1](https://www.reddit.com/user/Brenni1/) for pointing this out. 
 
 You can adapt these scripts pretty easily to bundle any version of Project Zomboid you'd like. It also should be easy to run any of the current versions (it's 2026-04 as I'm updating this, jic) side by side with adapted startup scripts for each one. The fact that you won't get mod updates except for the current version running through Steam goes both ways here.
 
