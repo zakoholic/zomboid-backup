@@ -8,6 +8,7 @@ $backupDir = "C:\ZomboidBackup\"
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 $backupUserProfileDir	= $backupDir + "userprofile\"
+$backupModsDir			= $backupDir + "userprofile\mods\"
 $backupGameDir			= $backupDir + "game\"
 $gameDir				= $steamDir + "common\ProjectZomboid\"
 $workshopModsDir		= $steamDir + "workshop\content\108600\"
