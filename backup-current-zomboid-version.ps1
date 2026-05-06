@@ -7,9 +7,11 @@ $backupDir = "C:\ZomboidBackup\"
 
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
-$backupUserProfileDir	= $backupDir + "userprofile\"
-$backupModsDir			= $backupDir + "userprofile\mods\"
+$steamDir  				= $steamDir.TrimEnd('\') + '\'
+$backupDir 				= $backupDir.TrimEnd('\') + '\'
 $backupGameDir			= $backupDir + "game\"
+$backupUserProfileDir	= $backupDir + "userprofile\"
+$backupModsDir			= $backupUserProfileDir + "mods\"
 $gameDir				= $steamDir + "common\ProjectZomboid\"
 $workshopModsDir		= $steamDir + "workshop\content\108600\"
 $userProfileDir			= [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::UserProfile) + "\Zomboid\*"
