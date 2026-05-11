@@ -67,7 +67,7 @@ The Workshop-ID is **3281755175,** and inside its "mods" directory you'll see fi
 ### 4. Play the backed-up copy
 Go into your backup directory and launch `start-zomboid-backup.bat` to play the backed-up copy.
 
-Alternatively, if you don't want to use the provided batch file. Go to `C:\ZomboidBackup\game` and create a shortcut to `ProjectZomboid64.bat`. Right-click it, choose `Properties` and add `-cachedir="C:\ZomboidBackup\userprofile"` at the end of the target section.
+Alternatively, if you don't want to use the provided batch file. Go to `C:\ZomboidBackup\game` and create a shortcut to `ProjectZomboid64.bat`. Right-click it, choose `Properties`, and add `"-cachedir=C:\ZomboidBackup\userprofile"` including the quotes at the end of the target section.
 
 
 ### 5. Afterthoughts
